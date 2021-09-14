@@ -1,0 +1,9 @@
+{%extends "layout.html"%}
+{% set pagetitle = "Success" %}
+{% set title = "Request Key" %}
+{%block extrahead %}        <meta http-equiv="refresh" content="0; {{url_for('get_key_flash')}}">{%endblock%}
+{%block content %}
+        <h1>SSH Key Server</h1>
+        <p>Your SSH key has been generated! The following SSH public key will be returned:</p>
+        <pre><code>{{pubkey}}</code></pre>
+{%endblock%}

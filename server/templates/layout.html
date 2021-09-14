@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+        <title>{{title | default("SSH Keyserver") }}</title>
+        {%block extrahead %}{%endblock%}
+    </head>
+    <body>
+        <header class="sticky">
+            <a href="{{url_for('home')}}" class="logo">SSH Keys</a>
+            <a href="{{url_for('enroll')}}" class="button">Enroll</a>
+          </header>
+
+    <div class="container">
+        <h1>{{pagetitle}} - SSH Keyserver</h1>
+        {% block content %}
+        {% endblock %}
+    </div>
+    </body>
+</html>

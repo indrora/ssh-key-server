@@ -1,0 +1,12 @@
+{%extends "layout.html"%}
+{% set pagetitle = "Enroll" %}
+{% set title = "Enroll account in SSH timeboxing" %}
+{%block content %}
+
+        {%if error %}<pre>Error: {{error}}{%endif%}
+        <form method="POST">
+            <label>Username:</label> <input type="text" name="username"><br />
+            <label>Password (UNIX): </label> <input type="password" name="password"> <br />
+            <input type="submit" />
+        </form>
+{%endblock%}

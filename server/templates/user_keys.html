@@ -1,0 +1,18 @@
+{%extends "layout.html"%}
+{% set pagetitle = "Key List" %}
+{% set title = "User Keys" %}
+{%block content %} 
+
+<form method="GET">
+    <label>Username:</label> <input name="username" value="{{username|default('')}}"> <input type="submit">
+</form>
+
+<table>
+    {% for key in keys %}
+    <tr>
+        <td>{{key.user}}</td><td>{{key.expires}}</td><td><code>{{key.line|truncate(64)}}</code></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

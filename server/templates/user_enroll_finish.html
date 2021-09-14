@@ -1,0 +1,27 @@
+{%extends "layout.html"%}
+{% set pagetitle = "Success" %}
+{% set title = "Enroll" %}
+{%block content %}
+
+<div class="row">
+
+    <div class="card col-md-offset-2">
+        <div class="section">
+            <h2>QR Enrollment</h2>
+            <p>Scan this with your authenticator application</p>    
+        </div>
+        <div class="section">
+            
+            <img src="{{url_for('get_flash_qr')}}" class="section media"/>
+        </div>
+    </div>
+    <div class="card">
+        <h1>Manual Enrollment</h1>
+        <div class="section">
+            <p>If you use a password manager that supports OTP tokens, enter the following secret:</p>
+            <pre>{{secret}}</pre>
+        </div>
+    </div>
+</div>
+        <p>You will only see this page once.</p>
+{%endblock%}

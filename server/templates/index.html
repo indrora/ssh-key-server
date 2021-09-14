@@ -1,0 +1,11 @@
+{%extends "layout.html"%}
+{% set pagetitle = "Main Page" %}
+{% set title = "SSH Key Service" %}
+{%block content %}
+
+        <ul>
+            <li><a href="{{url_for('enroll')}}">Register</a> for timeboxed keys</li>
+            <li><a href="{{url_for('request_key')}}">Acquire</a> a timeboxed key</li>
+            <li><a href="{{url_for('list_keys')}}">List</a> timeboxed keys</li>
+        </ul>
+{%endblock%}

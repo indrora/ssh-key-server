@@ -1,0 +1,12 @@
+{%extends "layout.html"%}
+{% set pagetitle = "Request Key" %}
+{% set title = "Request Key" %}
+{%block content %}
+
+        {%if error %}<pre>Error: {{error}}</pre>{%endif%}
+        <form method="POST">
+            <label>Username:</label> <input type="text" name="username"><br />
+            <label>TOTP: </label> <input type="text" name="otp"> <br />
+            <input type="submit" />
+        </form>
+{%endblock%}
